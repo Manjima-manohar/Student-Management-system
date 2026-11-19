@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1 id="head">welcome</h1>
+    <h2>hello world</h2>
+    <h1>{{name}}</h1>
+    {% if age >= 18 %}
+    <h1>eligible</h1>
+    {% else %}
+    <h1>not eliglbe</h1>
+    {% endif %}
+
+    <a href="{% url 'aboutt' %}">about</a>
+
+    <!-- <img src="{% static 'images/flower.jpg' %}" alt=""> -->
+
+    <!-- <button onclick="sample()">click</button> -->
+
+    <a href="{% url 'register' %}">signup</a>
+
+    <a href="{% url 'login' %}">login</a>
+
+    <a href="{% url 'logout' %}">logout</a>
+
+    <a href="">Cookies</a>
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

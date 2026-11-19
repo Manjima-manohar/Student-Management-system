@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>about page</h1>
+    <a href="{% url 'index' %}">Home</a>
+
+    <form action="{% url 'add' %}" method="POST">
+        {% csrf_token %}
+        <label for="">name</label>
+        <input type="text" name="username" id="" required><br>
+        <label for="">address</label>
+        <input type="text" name="address" id="" required><br>
+        <input type="submit" value="submit">
+    </form>
+    
+    <h1>{{msg}}</h1>
+
+    <a href="{% url 'display' %}">display</a>
+
+
+    <form action="{% url 'update' %}" method="POST">
+    {% csrf_token %}
+    <label for="">existing name</label>
+    <input type="text" name="oldname" id=""><br>
+    <label for="">New Name</label>
+    <input type="text" name="newname" id=""><br>
+    <input type="submit" value="update">
+</form>
+{{msg2}}
+
+
+<h1>Django forms</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="submit">
+</form>
+
+</body>
+</html>
+
+
